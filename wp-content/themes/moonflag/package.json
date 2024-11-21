@@ -1,5 +1,5 @@
 {
-  "name": "blanktemplatephp",
+  "name": "moonflag",
   "version": "1.0.0",
   "scripts": {
     "sass-watch": "sass --watch src/sass/styles.scss:dist/css/styles.css",
