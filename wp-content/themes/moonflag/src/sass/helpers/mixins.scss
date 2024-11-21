@@ -58,14 +58,14 @@
   @include heading-text-sm;
   text-transform: uppercase;
   text-decoration: none;
-  background-color: $blue;
+  background-color: $fColor;
   color: $white;
   padding: 1.25rem;
   font-weight: bold;
   border: none;
   
   &:hover{
-    background-color: $blue-dark;
+    background-color: $fColor-dark;
     @include transition-colors;
   }
 }

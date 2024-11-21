@@ -1,0 +1,17 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+%border-radius{
+    border-radius: 900px;
+}
+
+%icons{
+    content: '';
+    top: 0;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    margin-left: 1rem;
+    height: 100%;
+}

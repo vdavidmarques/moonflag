@@ -15,11 +15,3 @@
     Menu 
     ********************************/
     require_once( 'theme/menu.php' );
-
-
-    /*******************************
-    Custom Posts
-    ********************************/
-
-    require_once( 'theme/custom-post.php');
-        
