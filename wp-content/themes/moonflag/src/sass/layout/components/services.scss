@@ -1,0 +1,123 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+@import "../../helpers/placeholder.scss";
+
+.services{
+    background-image: linear-gradient($fColor-medium 40%, $gray 0);
+    padding-top: 2.5rem;
+
+    @media (min-width: $breakpoint-xl) {
+        background-image: linear-gradient($fColor-medium 70%, $gray 0);
+    }
+    &--header{
+        @media (min-width: $breakpoint-xl) {
+            display: grid;
+            @include grid-cols-12;
+        }
+
+        .main-title{
+            @media (min-width: $breakpoint-xl) {
+                @include col-span-5;
+            }
+
+            .title{
+                color: $sColor;
+                font-size: 1.25rem;
+                @media (min-width: $breakpoint-xl) {
+                    font-size: 2.25rem;
+                    
+                }
+            }
+        }
+        .content{
+            @media (min-width: $breakpoint-xl) {
+                @include col-span-7;
+                @include col-start-9;
+            }
+            .desc{
+                color: $gray;
+                margin-bottom: 0.625rem;
+            }
+    
+            .link{
+                color: $green;
+                font-weight: bold;
+                text-decoration: underline;
+                padding-left: 1.5625rem;
+                position: relative;
+    
+                &:before{
+                    @extend %icons;
+                    background-image: url(../../dist/icons/wpp.svg);
+                    width: 0.9375rem;
+                    left: 0;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &--list{
+        display: grid;
+        @include grid-cols-1;
+        row-gap: 1.25rem;
+        margin-top: 2.5rem;
+
+        @media (min-width: $breakpoint-xl) {
+            @include grid-cols-3;
+            column-gap: 1.25rem;
+        }
+
+        .the-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 1.25rem;
+            border-radius: 1.625rem;
+            background: radial-gradient(141.32% 110.16% at 96.21% 0%, rgba(255, 128, 0, 0.10) 0%, rgba(11, 22, 35, 0.10) 100%), #00153A;
+            padding: 2.5rem;
+
+            .image{
+                background: rgba(255, 208, 120, 0.10);
+                width: 4.125rem;
+                height: 4.125rem;
+                opacity: 5;
+                border-radius: 1.625rem;
+                padding: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+;
+
+                img{
+                    width: 2.625rem;
+                    height: 2.625rem;
+                    object-fit: contain;
+                }
+            }
+
+            .title{
+                color: $gray;
+                text-align: center;
+            }
+
+            .link a{
+                color: $sColor;
+                position: relative;
+                padding-right: 1.25rem;
+
+                &:hover{
+                    color: $sColor-medium;
+                }
+
+                &::after{
+                    @extend %icons;
+                    right: 0;
+                    background-image: url(../../dist/icons/arrow-right-2.svg);
+                    width: 15px;
+                }
+            }
+        }
+    }
+}
