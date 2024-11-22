@@ -1,17 +1,38 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
-%border-radius{
-    border-radius: 900px;
+%border-radius {
+  border-radius: 900px;
 }
 
-%icons{
-    content: '';
-    top: 0;
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    margin-left: 1rem;
-    height: 100%;
+%icons {
+  content: "";
+  top: 0;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  margin-left: 1rem;
+  height: 100%;
+}
+
+%tag {
+  color: $fColor;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 0.625rem;
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  width: fit-content;
+  height: 1.375rem;
+  @extend %border-radius;
+  margin-bottom: 1.25rem;
+
+  &::before {
+    left: 0;
+    width: 1.25rem;
+    @extend %icons;
+  }
 }

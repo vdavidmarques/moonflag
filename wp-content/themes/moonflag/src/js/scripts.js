@@ -82,3 +82,30 @@ document.addEventListener('DOMContentLoaded', function() {
 //     item.classList.remove("opened");
 //   })
 // }
+
+document.addEventListener('DOMContentLoaded', function () {
+  function updateCheckboxLinks() {
+      const checkboxes = document.querySelectorAll('.checkbox-offer label span');
+
+      checkboxes.forEach((checkbox) => {
+          const textContent = checkbox.innerHTML;
+
+          const updatedContent = textContent.replace(
+              /Política de Dados./,
+              '<a href="#politica-de-dados" target="_blank" rel="noopener noreferrer">Política de Dados.</a>'
+          );
+
+          checkbox.innerHTML = updatedContent;
+      });
+  }
+
+  updateCheckboxLinks();
+
+  document.addEventListener('wpcf7submit', updateCheckboxLinks);
+
+  document.addEventListener('wpcf7mailsent', updateCheckboxLinks);
+  document.addEventListener('wpcf7invalid', updateCheckboxLinks);
+  document.addEventListener('wpcf7spam', updateCheckboxLinks);
+  document.addEventListener('wpcf7error', updateCheckboxLinks);
+});
+

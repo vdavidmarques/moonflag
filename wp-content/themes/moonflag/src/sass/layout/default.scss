@@ -151,18 +151,6 @@ input[type] {
   height: 3.4375rem;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea,
-input[type] {
-  font-family: $font-rubik;
-  width: 100%;
-  border: 1px solid $fColor;
-  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
-  border-radius: 1.25rem;
-}
-
 input::placeholder,
 textarea::placeholder {
   color: $fColor;
