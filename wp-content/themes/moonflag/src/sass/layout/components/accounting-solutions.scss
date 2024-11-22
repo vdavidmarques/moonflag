@@ -1,0 +1,57 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+@import "../../helpers/placeholder.scss";
+
+.accounting-solutions{
+    padding: 2.5rem 0;
+
+    @media (min-width: $breakpoint-xl) {
+        padding: 6.25rem 0;
+    }
+
+    &--header{
+        .title{
+            color: $fColor-medium;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+
+            @media (min-width: $breakpoint-xl) {
+                font-size: 2.25rem;
+                margin-bottom: 4.125rem;
+            }
+        }
+    }
+
+    &--lists{
+
+        &--list{
+            display: flex;
+            flex-direction: column;
+            padding: 3.25rem 2.375rem;
+            justify-content: center;
+            border-radius: 1.25rem;
+            border: 1px solid rgba(154, 168, 200, 0.40);
+            background: radial-gradient(159.05% 118.3% at 18.89% 18.62%, rgba(255, 128, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 55.52%), rgba(154, 168, 200, 0.10);
+
+            .image{
+                width: 3.25rem;
+                height: 3.25rem;
+                margin-bottom: 1.5625rem;
+            }
+
+            .desc{
+                h1,h2,h3,h4{
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    margin-bottom: 2rem;
+                    color: $fColor-medium;
+                }
+                p{
+                    color: $fColor-ultradark;
+                }
+            }
+        }
+    }
+}

@@ -204,9 +204,10 @@ section {
 body {
   font-family: $font-bricolage;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.875rem;
   overflow-x: hidden;
+  background-color: $gray;
 
   @media (min-width: $breakpoint-xl) {
     font-size: 1.125rem;
