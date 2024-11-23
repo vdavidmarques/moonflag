@@ -51,6 +51,7 @@
         .tag {
           background-color: $fColor-medium;
           border: 1px solid $fColor;
+          color: $sColor;
           @extend %tag;
   
           &::before {
