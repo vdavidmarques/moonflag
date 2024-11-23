@@ -25,6 +25,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body <?php body_class(); ?>>
@@ -60,12 +62,13 @@
                                 Fechar menu
                             </button>
                         </div>
-                        <button class="button button--primary button--icon">
+                        <button id="contact-us-button" onclick="openModal()" class="button button--primary button--icon">
                             Fale com a Zotus
                         </button>
                     </div>
                 </div>
             </div>
         </header>
+        <?php include 'components/contact-us-modal.php'; ?>
         <div class="big-circle-graphic top mobile">&nbsp;</div>
         <main id="content" role="main">

@@ -134,6 +134,7 @@
   
             &::after{
               @extend %icons;
+              margin-left: 1rem;
               right: 0;
               background-image: url(../../dist/icons/arrow-right.svg);
               width: 15px;

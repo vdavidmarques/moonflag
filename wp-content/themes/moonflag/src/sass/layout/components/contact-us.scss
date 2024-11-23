@@ -26,6 +26,7 @@
       .tag {
         border: 1px solid $sColor-medium;
         font-weight: 500;
+        color: $fColor;
         @extend %tag;
         margin-bottom: 1.25rem;
         background-color: $sColor;

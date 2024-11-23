@@ -78,12 +78,28 @@ function closeMenu() {
   body.classList.remove("overflow-hidden");
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('header'); 
+  const stickyClass = 'sticky'; 
+  const offset = header.offsetTop; 
+
+  function toggleStickyHeader() {
+      if (window.scrollY > offset) {
+        header.classList.add(stickyClass);
+      } else {
+        header.classList.remove(stickyClass);
+      }
+  }
+
+  window.addEventListener('scroll', toggleStickyHeader);
+});
+
+
 function openModal(){
   var modal = document.querySelectorAll(".contact-us-modal");
   modal.forEach(function(item){
     item.classList.add("openned");
   })
-  scrollTop();
   body.classList.add("overflow-hidden");
 }
 

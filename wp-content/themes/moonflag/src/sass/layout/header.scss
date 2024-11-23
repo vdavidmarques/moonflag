@@ -1,11 +1,21 @@
 @import "../helpers/variables.scss";
 @import "../helpers/mixins.scss";
+@import "../helpers/placeholder.scss";
 
 .header {
   background-color: $fColor-medium;
   color: $gray;
   padding: 1.25rem 0;
   position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 40;
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
   .header--container {
     @media (min-width: $breakpoint-xl) {
@@ -87,21 +97,20 @@
               }
             }
           }
+
           .bg-close-menu-mobile {
             @media (min-width: $breakpoint-xl) {
               display: none;
             }
           }
-          &.openned {
-            display: flex;
+
+          &.openned {       
+            width: 100%;    
             position: absolute;
-            top: 0;
+            @extend %modal-openned;   
             left: 0;
-            width: 100%;
-            height: 100vh;
             padding: 20px;
-            background-color: $fColor-dark;
-            z-index: 50;
+            background-color: $fColor-dark;          
 
             nav#menu {
               .main-menu {
@@ -112,20 +121,10 @@
             }
 
             .bg-close-menu-mobile {
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: center;
-              overflow: hidden;
-              padding-left: 1.5rem;
-              text-indent: -624.9375rem;
-              border: none;
-              position: absolute;
-              top: 1.25rem;
-              right: 1rem;
               width: 2.25rem;
               height: 2.25rem;
-              background: url(../../dist/icons/close-menu-icon.svg);
-              cursor: pointer;
+              @extend %bg-close;             
+              background: url(../../dist/icons/close-menu-icon.svg);             
             }
           }
 

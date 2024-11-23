@@ -11,7 +11,7 @@
             <div class="accounting-solutions--lists swiper-wrapper">
                 <?php foreach ($solutions_list as $key => $item): ?>
                     <div class="accounting-solutions--lists--list swiper-slide">
-                        <img src="<?php echo $item['icon']['url']; ?>" alt="<?php echo $item['title']; ?>" class="image">
+                        <img src="<?php echo $item['icon']['url']; ?>" alt="<?php echo $item['icon']['title']; ?>" class="image">
                         <div class="desc">
                             <?php echo $item['text']; ?></h3>
                         </div>
