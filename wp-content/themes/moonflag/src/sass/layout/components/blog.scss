@@ -1,0 +1,153 @@
+@import "../../helpers/variables.scss";
+@import "../../helpers/mixins.scss";
+@import "../../helpers/placeholder.scss";
+
+.blog {
+  padding: 3.125rem 0;
+
+  @media (min-width: $breakpoint-xl) {
+    padding: 6.25rem 0;
+  }
+
+  &--header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+    margin-bottom: 4.125rem;
+
+    @media (min-width: $breakpoint-xl) {
+        display: grid;
+        @include grid-cols-12;
+    }
+
+    .content {
+        @media (min-width: $breakpoint-xl) {
+            @include col-span-6;
+        }
+      .tag {
+        background-color: $gray;
+        border: 1px solid $fColor;
+        color: $fColor;
+        font-weight: 500;
+        @extend %tag;
+
+        @media (min-width: $breakpoint-xl) {
+          font-size: 1.125rem;
+        }
+
+        &::before {
+          background-image: url("../../dist/icons/vector-blue.svg");
+          left: 0.625rem;
+        }
+      }
+      .title {
+        font-style: normal;
+        font-weight: 700;
+        color: $fColor;
+
+        @media (min-width: $breakpoint-xl) {
+          font-size: 2.25rem;
+        }
+      }
+    }
+    .show {
+        @media (min-width: $breakpoint-xl) {
+            @include col-span-6;
+            text-align: end;
+            padding-top: 2.625rem;
+        }
+
+      .button {
+        background-color: $sColor;
+        color: $white;
+        font-family: $font-dmsans;
+        @media (min-width: $breakpoint-xl) {
+          font-size: 1.125rem;
+        }
+
+        &:hover {
+          background-color: $fColor;
+          @include transition-colors;
+        }
+      }
+    }
+  }
+
+  &--list {
+    display: grid;
+    @include grid-cols-1;
+    row-gap: 30px;
+
+    @media (min-width: $breakpoint-xl) {
+      @include grid-cols-3;
+      column-gap: 2.875rem;
+    }
+
+    .recent-post {
+      .post-thumbnail {
+        border-radius: 0.625rem 0.625rem 0px 0px;
+        height: 19.625rem;
+        overflow: hidden;
+      }
+
+      .post-category {
+        background-color: $sColor;
+        color: $fColor;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0.5rem 2rem;
+        text-align: center;
+        border-radius: 6.25rem;
+        width: fit-content;
+        margin-left: 3.125rem;
+        margin-top: -1.5625rem;
+        z-index: 10;
+        position: relative;
+        margin-bottom: 1.25rem;
+      }
+      .data-infos {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        @media (min-width: $breakpoint-xl) {
+            padding: 0 3.125rem;
+        }
+
+        .date-author {
+          font-size: 0.875rem;
+          color: $gray-blue;
+        }
+        .post-title a {
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 700;
+          color: $fColor;
+        }
+        .read-more {
+          a {
+            position: relative;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: $sColor;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            padding-right: 20px;
+
+            &::after {
+              @extend %icons;
+              background-image: url("../../dist/icons/arrow-right-simple.svg");
+              width: 15px;
+              right: 0;
+            }
+
+            &:hover{
+                color: $sColor-medium;
+                text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
