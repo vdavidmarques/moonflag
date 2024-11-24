@@ -5,6 +5,7 @@
 .accounting-solutions {
   padding-top: 2.5rem;
   padding-bottom: 6.25rem;
+  overflow-x: hidden;
 
   @media (min-width: $breakpoint-xl) {
     padding-top: 6.25rem;
@@ -15,16 +16,24 @@
   }
 
   &--header {
+    @media (min-width: $breakpoint-xl) {
+      display: grid;
+      @include grid-cols-12;
+    }
+
     .title {
       color: $fColor-medium;
       text-align: center;
       font-weight: 700;
+      line-height: normal;
       font-size: 1.25rem;
       margin-bottom: 2.5rem;
 
       @media (min-width: $breakpoint-xl) {
         font-size: 2.25rem;
         margin-bottom: 4.125rem;
+        @include col-span-7;
+        @include col-start-4;
       }
     }
   }
@@ -32,7 +41,6 @@
   &--lists {
     &--list {
       padding: 3.25rem 2.375rem;
-
       border-radius: 1.25rem;
       border: 1px solid rgba(154, 168, 200, 0.4);
       background: radial-gradient(
@@ -58,15 +66,43 @@
           margin-bottom: 2rem;
           color: $fColor-medium;
         }
+
         p {
           color: $fColor-ultradark;
+          min-height: 20.625rem;
+        }
+      }
+
+      .button{
+        display: none;
+      }
+
+      &:hover {
+        background: radial-gradient(149.1% 139.11% at 16.85% 16.18%, rgba(255, 128, 0, 0.20) 0%, rgba(11, 22, 35, 0.20) 54.99%), linear-gradient(0deg, #00153A 0%, #00153A 100%), radial-gradient(94.33% 92.6% at 69.26% -14.5%, #002068 0%, #001953 100%);
+        border: 1px solid var(--Laranja-Principal, $sColor);
+        cursor: pointer;
+        @include transition-colors;
+
+        .desc{  
+          p{
+            color: $gray;
+          }
+
+          h3{
+            color: $sColor;
+          }
+        }
+        .button{
+          @extend %button-orange;
+          margin-left: auto;
+          margin-right: auto;
+          transform: translateY(60%);
         }
       }
     }
   }
 
   .swiper-container {
-    overflow: hidden;
 
     .swiper-button-next,
     .swiper-button-prev {
@@ -88,7 +124,7 @@
     }
 
     .swiper-pagination {
-      transform: translateY(4.375rem);
+      transform: translateY(6.375rem);
 
       &-bullet {
         opacity: 1;

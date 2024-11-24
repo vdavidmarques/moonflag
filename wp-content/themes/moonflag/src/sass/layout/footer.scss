@@ -1,48 +1,109 @@
 @import "../helpers/variables.scss";
 @import "../helpers/mixins.scss";
 
-footer {
+.elementor-container {
+  position: relative;
+  background-color: $fColor-medium;
 
-  .wpp-float {
-    width: 2.5rem;
-    height: 2.5rem;
-    object-fit: contain;
-    position: fixed;
-    z-index: 50;
-    animation: bounce 1s infinite;
-    bottom: 100px;
-    right: 1.25rem;
-    
-    @media screen and (min-width: $breakpoint-lg) {
-      right: 2.5rem;
-      bottom: 9.375rem;
+  .rectangle-2 {
+    background-image: url(../../dist/icons/rectangle-2.svg;);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    display: none;
+    z-index: 10;
+    pointer-events: none;
+
+    @media (min-width: $breakpoint-xl) {
+      display: block;
     }
   }
-  
-  .scroll-to-top-btn {
-    background-position: center;
+
+  .scroll-top-icon{
+    position: relative;
+    z-index: 30;
     cursor: pointer;
-    overflow: hidden;
-    padding-left: 1.5rem;
-    text-indent: -624.9375rem;
-    border: none;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    position: fixed;
-    bottom: 2.5rem;
-    right: 1.875rem;
-    background: url("../../library/icons/up-arrow.svg");
-    width: 1.875rem;
-    height: 1.875rem;
-    object-fit: contain;
-    z-index: 50;
-  
-    @media screen and (min-width: $breakpoint-lg) {
-      right: 2.5rem;
-      bottom: 5rem;
+    transform: translateY(-2.5rem);
+    
+    @media (min-width: $breakpoint-xl) {
+      display: grid;
+      @include grid-cols-12;
+    }
+
+    .icon{
+      @include col-span-11;
+      position: absolute;
+      top: 0;
+      right: 0.625rem;
+      width: 3.125rem;
+      height: 3.125rem;
+      
+      @media (min-width: $breakpoint-md) {
+        right: 0;
+        width: 4.375rem;
+        height: 4.375rem;    
+      }
+    }
+  }
+
+  .footer-container {
+    background-color: transparent!important;
+    padding-top: 5rem;
+
+    @media (min-width: $breakpoint-xl) {
+      padding-top: 7.5rem;
+      z-index: 20;
     }
   }
 }
 
+.after-footer{
+  z-index: 30;
+  background-color: $sColor;
+  color: $fColor;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  display: block;
+  padding: 0.9375rem 0;
 
+  a{
+    margin-right: 1.25rem;
+    
+    @media (min-width: $breakpoint-xl) {
+      margin-right: 2.5rem;
+    }
+  }
+}
 
+.social-media-footer{
+  z-index: 20;
+  padding-bottom: 2.875rem;
+}
+
+.scroll-to-top-btn {
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+  padding-left: 1.5rem;
+  text-indent: -624.9375rem;
+  border: none;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 1.875rem;
+  background: url("../../library/icons/up-arrow.svg");
+  width: 1.875rem;
+  height: 1.875rem;
+  object-fit: contain;
+  z-index: 50;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    right: 2.5rem;
+    bottom: 5rem;
+  }
+}

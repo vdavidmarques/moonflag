@@ -13,15 +13,18 @@ if (!\Elementor\Plugin::$instance->editor->is_edit_mode()) {
     include 'components/blog.php';
 }
 ?>
-
-<div class="elementor-container">
+<section class="elementor-container">
+    <div class="rectangle-2">&nbsp;</div>
+    <div class="container scroll-top-icon">
+        <img src="<?php echo get_template_directory_uri(); ?>/dist/icons/top.svg" alt="Moonlight" class="icon" id="scrollToTopBtn">
+    </div>
     <?php
     if (have_posts()) : while (have_posts()) : the_post();
             the_content();
         endwhile;
     endif;
     ?>
-</div>
+</section>
 <?php
 
 get_footer();

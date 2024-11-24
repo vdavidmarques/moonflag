@@ -4,6 +4,7 @@
 
 .blog {
   padding: 3.125rem 0;
+  background-color: $gray-light;
 
   @media (min-width: $breakpoint-xl) {
     padding: 6.25rem 0;
@@ -27,12 +28,12 @@
       .tag {
         background-color: $gray;
         border: 1px solid $fColor;
-        color: $fColor;
+        color: $fColor-light;
         font-weight: 500;
         @extend %tag;
 
         @media (min-width: $breakpoint-xl) {
-          font-size: 1.125rem;
+          font-size: 18px;
         }
 
         &::before {

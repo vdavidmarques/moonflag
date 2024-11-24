@@ -34,6 +34,11 @@
     width: 1.25rem;
     @extend %icons;
   }
+
+  @media (min-width: $breakpoint-xl) {
+    margin-bottom: 2rem;
+  }
+
 }
 
 %bg-close{
@@ -55,4 +60,15 @@
   top: 0;
   height: 100vh;
   z-index: 50;
+}
+
+%button-orange{
+  background: linear-gradient(
+    to right,             
+    rgb(255, 128, 0) 0,
+    rgb(203, 99, 0) 100%
+  );
+  color: $gray;
+  display: flex;
+  align-items: center;
 }

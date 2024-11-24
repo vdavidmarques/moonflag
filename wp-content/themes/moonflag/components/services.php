@@ -1,3 +1,5 @@
+<div id="quem-atendemos" style="position: absolute;">&nbsp;</div>
+<div id="sobre-nos" style="position: absolute;">&nbsp;</div>
 <section class="services">
     <div class="container">
         <?php
@@ -7,10 +9,10 @@
             $service_lists = get_field('service_lists', $homePageId);
         ?>
         <div class="services--header">
-            <div class="main-title">
+            <div class="main-title scroll-effect">
                 <h2 class="title"><?php echo $title; ?></h2>
             </div>
-            <div class="content">
+            <div class="content scroll-effect">
                 <p class="desc"><?php echo $desc; ?></p>
                 <a href="<?php echo $button_talk_services['url']; ?>" class="link">
                     <?php echo $button_talk_services['title']; ?>
@@ -20,7 +22,7 @@
 
         <div class="services--list">
             <?php foreach ($service_lists as $key => $value): ?>
-                <div class="the-list">
+                <div class="the-list scroll-effect">
                     <div class="image">
                         <img src="<?php echo $value['icon']['url']; ?>" alt="<?php echo $value['title']; ?>">
                     </div>

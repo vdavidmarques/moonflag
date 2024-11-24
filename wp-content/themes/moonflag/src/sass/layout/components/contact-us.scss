@@ -3,6 +3,7 @@
 @import "../../helpers/placeholder.scss";
 
 .contact-us {
+  background-image: linear-gradient($gray 50%, $gray-light 50%);
   &--container {
     border-radius: 2rem;
     border: 1px solid var(--Laranja-200, $sColor-medium);
@@ -21,6 +22,9 @@
       @media (min-width: $breakpoint-xl) {
         @include col-span-6;
         padding: 5rem 3.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       .tag {

@@ -11,7 +11,7 @@
     <div class="container">
         <div class="main-banner--contents">
             <div class="main-banner--contents--texts">
-                <div class="item">
+                <div class="item scroll-effect">
                     <h2 class="tag"><?php echo $tag; ?></h2>
                     <div class="title">
                         <?php echo $main_text; ?>
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <div class="main-banner--contents--image"><img src="<?php echo $image['url']; ?>" alt="<?php echo $tag; ?>"></div>
+            <div class="main-banner--contents--image scroll-effect"><img src="<?php echo $image['url']; ?>" alt="<?php echo $tag; ?>"></div>
         </div>
     </div>
 

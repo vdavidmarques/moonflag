@@ -1,11 +1,12 @@
 <section class="blog">
+    <div id="blog">&nbsp;</div>
     <div class="container">
         <div class="blog--header">
-            <div class="content">
+            <div class="content scroll-effect">
                 <h4 class="tag">blog</h4>
                 <h3 class="title">Encontre as informações mais importantes para seu dia a dia</h3>
             </div>
-            <div class="show">
+            <div class="show scroll-effect">
                 <button class="button">
                     Confira o blog
                 </button>
@@ -24,7 +25,7 @@
             if ($recent_posts->have_posts()) :
                 while ($recent_posts->have_posts()) : $recent_posts->the_post();
             ?>
-                    <div class="recent-post">
+                    <div class="recent-post scroll-effect">
                         <div class="post-thumbnail">
                             <?php if (has_post_thumbnail()) : ?>
 

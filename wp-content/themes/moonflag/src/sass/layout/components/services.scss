@@ -77,6 +77,7 @@
             border-radius: 1.625rem;
             background: radial-gradient(141.32% 110.16% at 96.21% 0%, rgba(255, 128, 0, 0.10) 0%, rgba(11, 22, 35, 0.10) 100%), #00153A;
             padding: 2.5rem;
+            cursor: pointer;
 
             .image{
                 background: rgba(255, 208, 120, 0.10);
@@ -117,6 +118,10 @@
                     background-image: url(../../dist/icons/arrow-right-2.svg);
                     width: 15px;
                 }
+            }
+
+            &:hover{
+                background: radial-gradient(141.32% 110.16% at 96.21% 0%, rgba(255, 128, 0, 0.20) 0%, rgba(11, 22, 35, 0.20) 100%), linear-gradient(0deg, #00153A 0%, #00153A 100%), radial-gradient(94.33% 92.6% at 69.26% -14.5%, #002068 0%, #001953 100%);
             }
         }
     }
